@@ -1,0 +1,18 @@
+{
+  "name": "copilot-agent-plugins",
+  "owner": { "name": "Github-Copilot-Plugins" },
+  "plugins": [
+    {
+      "name": "ralph-loop",
+      "source": "./plugins/ralph-loop",
+      "description": "Iterative self-referential task loops for Copilot with persistent loop state and completion controls.",
+      "category": "development"
+    },
+    {
+      "name": "dev-workflow",
+      "source": "./plugins/dev-workflow",
+      "description": "Reusable Copilot prompts for the full dev lifecycle: analyze, plan, implement, debug, test, review, audit, refactor, document.",
+      "category": "development"
+    }
+  ]
+}

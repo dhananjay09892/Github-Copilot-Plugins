@@ -1,0 +1,23 @@
+{
+  "name": "ralph-loop",
+  "displayName": "Ralph Loop",
+  "description": "Iterative AI task loops for Copilot using persistent local loop state, inspired by the Ralph Wiggum technique.",
+  "version": "1.0.0",
+  "author": { "name": "Anthropic-inspired community port" },
+  "category": "development",
+  "homepage": "./README.md",
+  "contents": {
+    "prompts": [
+      "./prompts/ralph-loop.prompt.md",
+      "./prompts/cancel-ralph.prompt.md",
+      "./prompts/help.prompt.md"
+    ],
+    "instructions": [
+      "./instructions/ralph-loop-standards.instructions.md"
+    ],
+    "scripts": [
+      "./scripts/setup-ralph-loop.ps1",
+      "./scripts/cancel-ralph.ps1"
+    ]
+  }
+}

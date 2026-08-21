@@ -1,0 +1,25 @@
+{
+  "name": "dev-workflow",
+  "displayName": "Dev Workflow",
+  "description": "Reusable Copilot prompts covering the full development lifecycle: analyze, plan, implement, debug, test, review, audit, refactor, document.",
+  "version": "1.0.0",
+  "author": { "name": "Github-Copilot-Plugins" },
+  "category": "development",
+  "homepage": "./README.md",
+  "contents": {
+    "prompts": [
+      "./prompts/analyze-repository.prompt.md",
+      "./prompts/plan-feature.prompt.md",
+      "./prompts/implement-feature.prompt.md",
+      "./prompts/debug-issue.prompt.md",
+      "./prompts/generate-tests.prompt.md",
+      "./prompts/review-code.prompt.md",
+      "./prompts/security-audit.prompt.md",
+      "./prompts/refactor.prompt.md",
+      "./prompts/documentation.prompt.md"
+    ],
+    "instructions": [
+      "./instructions/architecture-standards.instructions.md"
+    ]
+  }
+}
