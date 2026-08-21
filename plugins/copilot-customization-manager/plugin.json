@@ -1,0 +1,19 @@
+{
+  "name": "copilot-customization-manager",
+  "displayName": "Copilot Customization Manager",
+  "description": "Audit and create a repository's own .github/prompts, .github/instructions, and .github/agents files, catching missing frontmatter, broken links, and duplicated rules.",
+  "version": "1.0.0",
+  "author": { "name": "Github-Copilot-Plugins" },
+  "category": "meta",
+  "homepage": "./README.md",
+  "contents": {
+    "prompts": [
+      "./prompts/audit-customizations.prompt.md",
+      "./prompts/create-instruction-file.prompt.md",
+      "./prompts/create-prompt-file.prompt.md"
+    ],
+    "instructions": [
+      "./instructions/customization-manager-standards.instructions.md"
+    ]
+  }
+}
