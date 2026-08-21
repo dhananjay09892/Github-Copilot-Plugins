@@ -13,6 +13,12 @@
       "source": "./plugins/dev-workflow",
       "description": "Reusable Copilot prompts for the full dev lifecycle: analyze, plan, implement, debug, test, review, audit, refactor, document.",
       "category": "development"
+    },
+    {
+      "name": "agent-browser",
+      "source": "./plugins/agent-browser",
+      "description": "Citation-disciplined, prompt-injection-aware research prompts built on VS Code Copilot's built-in fetch/githubRepo/search tools.",
+      "category": "research"
     }
   ]
 }

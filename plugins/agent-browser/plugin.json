@@ -1,0 +1,18 @@
+{
+  "name": "agent-browser",
+  "displayName": "Agent Browser",
+  "description": "Citation-disciplined, prompt-injection-aware research prompts built on VS Code Copilot's built-in fetch/githubRepo/search tools.",
+  "version": "1.0.0",
+  "author": { "name": "Github-Copilot-Plugins" },
+  "category": "research",
+  "homepage": "./README.md",
+  "contents": {
+    "prompts": [
+      "./prompts/web-research.prompt.md",
+      "./prompts/verify-source.prompt.md"
+    ],
+    "instructions": [
+      "./instructions/agent-browser-standards.instructions.md"
+    ]
+  }
+}
