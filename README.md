@@ -25,7 +25,6 @@ itself; installation means copying the selected bundle into the target repositor
 copilot-agent-plugins/
 ├── marketplace.json              # catalog of available plugins
 ├── plugins/
-│   ├── agent-sdk-dev/            # Agent SDK setup + verification bundle
 │   ├── ralph-loop/               # Iterative Ralph loop workflow bundle
 │   └── dev-workflow/             # one plugin = one themed bundle of prompts/instructions
 │       ├── plugin.json           # plugin metadata
@@ -39,7 +38,6 @@ copilot-agent-plugins/
 
 | Plugin | Description |
 |--------|-------------|
-| [`agent-sdk-dev`](./plugins/agent-sdk-dev) | Create and verify Claude Agent SDK projects for TypeScript and Python |
 | [`ralph-loop`](./plugins/ralph-loop) | Run iterative self-referential development loops with max-iteration and completion controls |
 | [`dev-workflow`](./plugins/dev-workflow) | Analyze repo, plan feature, implement feature, debug issue, generate tests, review code, security audit, refactor, documentation |
 
@@ -77,14 +75,6 @@ Copy-Item "$PluginsRepo\plugins\$PluginName\instructions\*.instructions.md" `
    "$TargetRepo\.github\instructions\"
 ```
 
-For `agent-sdk-dev`, also copy its agents:
-
-```powershell
-New-Item -ItemType Directory -Force "$TargetRepo\.github\agents"
-Copy-Item "$PluginsRepo\plugins\agent-sdk-dev\agents\*.agent.md" `
-   "$TargetRepo\.github\agents\"
-```
-
 For `ralph-loop`, copy its PowerShell scripts to a project scripts directory if you need them:
 
 ```powershell
@@ -103,7 +93,6 @@ Each plugin README contains its available commands and plugin-specific setup:
 
 - [`dev-workflow`](./plugins/dev-workflow/README.md)
 - [`ralph-loop`](./plugins/ralph-loop/README.md)
-- [`agent-sdk-dev`](./plugins/agent-sdk-dev/README.md)
 
 ## Before using a plugin
 
@@ -116,9 +105,8 @@ Each plugin README contains its available commands and plugin-specific setup:
 6. Run the target project's normal tests, type checks, and lint checks after generated changes.
 7. Commit the copied `.github/` files if the whole team should use the same plugin version.
 
-Do not copy API keys or other secrets into plugin files. The `agent-sdk-dev` plugin may create
-projects that need an `ANTHROPIC_API_KEY`; keep that value in a local environment file and never
-commit it.
+Do not copy API keys or other secrets into plugin files. Keep secrets in local environment files and
+never commit them.
 
 ## Contributing a new plugin
 

@@ -25,6 +25,19 @@ run any time something is broken.
 
 ## Install
 
+**Quick install from PowerShell:**
+
+Run this command from the root of the target repository. It downloads the plugin directly from
+GitHub and creates the required VS Code folders:
+
+```powershell
+$base = "https://raw.githubusercontent.com/dhananjay09892/Github-Copilot-Plugins/main/plugins/dev-workflow"; New-Item -ItemType Directory -Force .github/prompts, .github/instructions | Out-Null; @("analyze-repository", "debug-issue", "documentation", "generate-tests", "implement-feature", "plan-feature", "refactor", "review-code", "security-audit") | ForEach-Object { Invoke-WebRequest "$base/prompts/$_.prompt.md" -OutFile ".github/prompts/$_.prompt.md" }; Invoke-WebRequest "$base/instructions/architecture-standards.instructions.md" -OutFile ".github/instructions/architecture-standards.instructions.md"
+```
+
+After the command completes, reload VS Code and use the prompts as `/` commands in Copilot Chat.
+Review existing files with the same names before running this command because the downloads replace
+those files.
+
 **Option A — copy into a consumer repo (recommended):**
 
 Copy `prompts/*.prompt.md` into that repo's `.github/prompts/` and `instructions/*.instructions.md`

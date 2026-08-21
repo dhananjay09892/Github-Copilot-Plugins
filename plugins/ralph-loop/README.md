@@ -30,6 +30,18 @@ This plugin emulates the workflow with state files and prompt-driven iterations 
 
 ## Install into a project
 
+**Quick install from PowerShell:**
+
+Run this command from the root of the target repository. It downloads the prompts, instructions,
+and PowerShell scripts directly from GitHub:
+
+```powershell
+$base = "https://raw.githubusercontent.com/dhananjay09892/Github-Copilot-Plugins/main/plugins/ralph-loop"; New-Item -ItemType Directory -Force .github/prompts, .github/instructions, scripts | Out-Null; @("cancel-ralph", "help", "ralph-loop") | ForEach-Object { Invoke-WebRequest "$base/prompts/$_.prompt.md" -OutFile ".github/prompts/$_.prompt.md" }; Invoke-WebRequest "$base/instructions/ralph-loop-standards.instructions.md" -OutFile ".github/instructions/ralph-loop-standards.instructions.md"; @("cancel-ralph", "setup-ralph-loop") | ForEach-Object { Invoke-WebRequest "$base/scripts/$_.ps1" -OutFile "scripts/$_.ps1" }
+```
+
+After the command completes, reload VS Code and run `/ralph-loop` in Copilot Chat. Review existing
+files with the same names before running this command because the downloads replace those files.
+
 Copy files into target repo:
 
 - `prompts/*.prompt.md` -> `.github/prompts/`
