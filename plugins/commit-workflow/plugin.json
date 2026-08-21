@@ -1,0 +1,18 @@
+{
+  "name": "commit-workflow",
+  "displayName": "Commit Workflow",
+  "description": "Generate Conventional Commits-style commit messages and Keep a Changelog-style changelog entries from the actual staged diff.",
+  "version": "1.0.0",
+  "author": { "name": "Github-Copilot-Plugins" },
+  "category": "collaboration",
+  "homepage": "./README.md",
+  "contents": {
+    "prompts": [
+      "./prompts/generate-commit-message.prompt.md",
+      "./prompts/generate-changelog-entry.prompt.md"
+    ],
+    "instructions": [
+      "./instructions/commit-workflow-standards.instructions.md"
+    ]
+  }
+}

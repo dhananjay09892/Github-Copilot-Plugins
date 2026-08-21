@@ -30,6 +30,7 @@ copilot-agent-plugins/
 │   ├── pr-issue-workflow/         # GitHub CLI-driven PR description, issue triage, review-to-task prompts
 │   ├── copilot-customization-manager/ # Audit/create this repo's own prompts, instructions, agents
 │   ├── onboarding-docs/           # CONTRIBUTING.md, dev-setup guide, and architecture diagram generation
+│   ├── commit-workflow/           # Conventional commit messages and changelog entries from the staged diff
 │   └── dev-workflow/               # one plugin = one themed bundle of prompts/instructions
 │       ├── plugin.json           # plugin metadata
 │       ├── README.md             # what it does, how to install/use
@@ -48,6 +49,7 @@ copilot-agent-plugins/
 | [`pr-issue-workflow`](./plugins/pr-issue-workflow) | Draft PR descriptions, triage issues, and turn review comments into task checklists using the GitHub CLI |
 | [`copilot-customization-manager`](./plugins/copilot-customization-manager) | Audit and create this repository's own .github/prompts, .github/instructions, and .github/agents files |
 | [`onboarding-docs`](./plugins/onboarding-docs) | Generate CONTRIBUTING.md, a dev-setup guide, and a Mermaid architecture diagram for new contributors |
+| [`commit-workflow`](./plugins/commit-workflow) | Generate Conventional Commits-style commit messages and Keep a Changelog-style changelog entries from the staged diff |
 
 ## Installing from GitHub
 
@@ -107,6 +109,7 @@ Each plugin README contains its available commands and plugin-specific setup:
 - [`pr-issue-workflow`](./plugins/pr-issue-workflow/README.md)
 - [`copilot-customization-manager`](./plugins/copilot-customization-manager/README.md)
 - [`onboarding-docs`](./plugins/onboarding-docs/README.md)
+- [`commit-workflow`](./plugins/commit-workflow/README.md)
 
 ## Before using a plugin
 

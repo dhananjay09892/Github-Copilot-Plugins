@@ -37,6 +37,12 @@
       "source": "./plugins/onboarding-docs",
       "description": "Generate CONTRIBUTING.md, a local dev-setup guide, and a Mermaid architecture diagram for new contributors, grounded in the actual repository.",
       "category": "documentation"
+    },
+    {
+      "name": "commit-workflow",
+      "source": "./plugins/commit-workflow",
+      "description": "Generate Conventional Commits-style commit messages and Keep a Changelog-style changelog entries from the actual staged diff.",
+      "category": "collaboration"
     }
   ]
 }
