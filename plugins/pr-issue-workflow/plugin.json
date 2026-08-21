@@ -1,0 +1,19 @@
+{
+  "name": "pr-issue-workflow",
+  "displayName": "PR & Issue Workflow",
+  "description": "Draft PR descriptions, triage issues, and turn review comments into task checklists using the GitHub CLI.",
+  "version": "1.0.0",
+  "author": { "name": "Github-Copilot-Plugins" },
+  "category": "collaboration",
+  "homepage": "./README.md",
+  "contents": {
+    "prompts": [
+      "./prompts/draft-pr-description.prompt.md",
+      "./prompts/triage-issue.prompt.md",
+      "./prompts/review-comments-to-tasks.prompt.md"
+    ],
+    "instructions": [
+      "./instructions/pr-issue-workflow-standards.instructions.md"
+    ]
+  }
+}

@@ -27,6 +27,7 @@ copilot-agent-plugins/
 ├── plugins/
 │   ├── ralph-loop/                # Iterative Ralph loop workflow bundle
 │   ├── agent-browser/             # Citation-disciplined web/GitHub research prompts
+│   ├── pr-issue-workflow/         # GitHub CLI-driven PR description, issue triage, review-to-task prompts
 │   └── dev-workflow/               # one plugin = one themed bundle of prompts/instructions
 │       ├── plugin.json           # plugin metadata
 │       ├── README.md             # what it does, how to install/use
@@ -42,6 +43,7 @@ copilot-agent-plugins/
 | [`ralph-loop`](./plugins/ralph-loop) | Run iterative self-referential development loops with max-iteration and completion controls |
 | [`dev-workflow`](./plugins/dev-workflow) | Analyze repo, plan feature, implement feature, debug issue, generate tests, review code, security audit, refactor, documentation |
 | [`agent-browser`](./plugins/agent-browser) | Research questions and verify sources using VS Code Copilot's built-in fetch/githubRepo/search tools, with citation and prompt-injection discipline |
+| [`pr-issue-workflow`](./plugins/pr-issue-workflow) | Draft PR descriptions, triage issues, and turn review comments into task checklists using the GitHub CLI |
 
 ## Installing from GitHub
 
@@ -98,6 +100,7 @@ Each plugin README contains its available commands and plugin-specific setup:
 - [`dev-workflow`](./plugins/dev-workflow/README.md)
 - [`ralph-loop`](./plugins/ralph-loop/README.md)
 - [`agent-browser`](./plugins/agent-browser/README.md)
+- [`pr-issue-workflow`](./plugins/pr-issue-workflow/README.md)
 
 ## Before using a plugin
 

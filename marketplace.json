@@ -19,6 +19,12 @@
       "source": "./plugins/agent-browser",
       "description": "Citation-disciplined, prompt-injection-aware research prompts built on VS Code Copilot's built-in fetch/githubRepo/search tools.",
       "category": "research"
+    },
+    {
+      "name": "pr-issue-workflow",
+      "source": "./plugins/pr-issue-workflow",
+      "description": "Draft PR descriptions, triage issues, and turn review comments into task checklists using the GitHub CLI.",
+      "category": "collaboration"
     }
   ]
 }
