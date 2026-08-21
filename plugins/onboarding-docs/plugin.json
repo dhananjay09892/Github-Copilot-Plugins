@@ -1,0 +1,19 @@
+{
+  "name": "onboarding-docs",
+  "displayName": "Onboarding Docs",
+  "description": "Generate CONTRIBUTING.md, a local dev-setup guide, and a Mermaid architecture diagram for new contributors, grounded in the actual repository.",
+  "version": "1.0.0",
+  "author": { "name": "Github-Copilot-Plugins" },
+  "category": "documentation",
+  "homepage": "./README.md",
+  "contents": {
+    "prompts": [
+      "./prompts/generate-contributing.prompt.md",
+      "./prompts/generate-dev-setup.prompt.md",
+      "./prompts/generate-architecture-diagram.prompt.md"
+    ],
+    "instructions": [
+      "./instructions/onboarding-docs-standards.instructions.md"
+    ]
+  }
+}

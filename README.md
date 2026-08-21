@@ -29,6 +29,7 @@ copilot-agent-plugins/
 │   ├── agent-browser/             # Citation-disciplined web/GitHub research prompts
 │   ├── pr-issue-workflow/         # GitHub CLI-driven PR description, issue triage, review-to-task prompts
 │   ├── copilot-customization-manager/ # Audit/create this repo's own prompts, instructions, agents
+│   ├── onboarding-docs/           # CONTRIBUTING.md, dev-setup guide, and architecture diagram generation
 │   └── dev-workflow/               # one plugin = one themed bundle of prompts/instructions
 │       ├── plugin.json           # plugin metadata
 │       ├── README.md             # what it does, how to install/use
@@ -46,6 +47,7 @@ copilot-agent-plugins/
 | [`agent-browser`](./plugins/agent-browser) | Research questions and verify sources using VS Code Copilot's built-in fetch/githubRepo/search tools, with citation and prompt-injection discipline |
 | [`pr-issue-workflow`](./plugins/pr-issue-workflow) | Draft PR descriptions, triage issues, and turn review comments into task checklists using the GitHub CLI |
 | [`copilot-customization-manager`](./plugins/copilot-customization-manager) | Audit and create this repository's own .github/prompts, .github/instructions, and .github/agents files |
+| [`onboarding-docs`](./plugins/onboarding-docs) | Generate CONTRIBUTING.md, a dev-setup guide, and a Mermaid architecture diagram for new contributors |
 
 ## Installing from GitHub
 
@@ -104,6 +106,7 @@ Each plugin README contains its available commands and plugin-specific setup:
 - [`agent-browser`](./plugins/agent-browser/README.md)
 - [`pr-issue-workflow`](./plugins/pr-issue-workflow/README.md)
 - [`copilot-customization-manager`](./plugins/copilot-customization-manager/README.md)
+- [`onboarding-docs`](./plugins/onboarding-docs/README.md)
 
 ## Before using a plugin
 

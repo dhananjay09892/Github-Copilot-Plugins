@@ -31,6 +31,12 @@
       "source": "./plugins/copilot-customization-manager",
       "description": "Audit and create a repository's own .github/prompts, .github/instructions, and .github/agents files, catching missing frontmatter, broken links, and duplicated rules.",
       "category": "meta"
+    },
+    {
+      "name": "onboarding-docs",
+      "source": "./plugins/onboarding-docs",
+      "description": "Generate CONTRIBUTING.md, a local dev-setup guide, and a Mermaid architecture diagram for new contributors, grounded in the actual repository.",
+      "category": "documentation"
     }
   ]
 }
