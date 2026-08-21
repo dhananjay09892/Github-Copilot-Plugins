@@ -4,7 +4,7 @@ param(
 )
 
 $promptParts = New-Object System.Collections.Generic.List[string]
-$maxIterations = 0
+$maxIterations = 5
 $completionPromise = $null
 
 for ($i = 0; $i -lt $ArgsList.Count; $i++) {
@@ -15,7 +15,7 @@ for ($i = 0; $i -lt $ArgsList.Count; $i++) {
                 throw "--max-iterations requires a value"
             }
             $i++
-            if (-not [int]::TryParse($ArgsList[$i], [ref]$maxIterations)) {
+            if (-not [int]::TryParse($ArgsList[$i], [ref]$maxIterations) -or $maxIterations -lt 1) {
                 throw "--max-iterations must be an integer"
             }
         }

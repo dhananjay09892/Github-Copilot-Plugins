@@ -1,2 +1,4 @@
 claude-plugins-official/
 .github/
+.copilot/
+/scripts/

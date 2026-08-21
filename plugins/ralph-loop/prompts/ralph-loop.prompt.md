@@ -1,7 +1,7 @@
 ---
 description: "Start an iterative Ralph loop for a task with max-iteration and completion-promise controls."
 agent: agent
-argument-hint: "TASK [--max-iterations N] [--completion-promise TEXT]"
+argument-hint: "TASK [--max-iterations N (default: 5)] [--completion-promise TEXT]"
 tools: [search, edit, runCommands, runTests, problems]
 ---
 
@@ -19,10 +19,10 @@ Start or continue a deterministic iteration loop over one stable prompt.
 
 1. Parse arguments:
    - task prompt text (required)
-   - `--max-iterations N` (optional, default unlimited)
+   - `--max-iterations N` (optional, default 5; use a larger value only when needed)
    - `--completion-promise TEXT` (optional)
 2. Initialize loop state by running:
-   - PowerShell: `./plugins/ralph-loop/scripts/setup-ralph-loop.ps1 $ARGUMENTS`
+   - PowerShell: `./scripts/setup-ralph-loop.ps1 $ARGUMENTS`
 3. Read `.copilot/ralph-loop.local.md` and execute iterations in this session.
 4. On each iteration:
    - perform one or more focused implementation/debug steps,

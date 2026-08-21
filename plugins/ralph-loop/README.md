@@ -19,7 +19,7 @@ Copilot-native port of the Ralph Wiggum iterative loop technique from the Claude
 - Starts an iterative loop for a stable task prompt.
 - Persists loop state in `.copilot/ralph-loop.local.md`.
 - Supports stop controls:
-  - `--max-iterations N`
+  - `--max-iterations N` (defaults to `5` when omitted)
   - `--completion-promise TEXT`
 - Provides a cancel command to stop active loops.
 
@@ -46,7 +46,10 @@ Copy files into target repo:
 
 - `prompts/*.prompt.md` -> `.github/prompts/`
 - `instructions/*.instructions.md` -> `.github/instructions/`
-- `scripts/*.ps1` -> any project script folder you prefer
+- `scripts/*.ps1` -> `scripts/` at the target repository root
+
+The prompts call `./scripts/setup-ralph-loop.ps1` and `./scripts/cancel-ralph.ps1`, so keep the
+scripts in that location unless you also update the prompt files.
 
 Reload VS Code, then run `/ralph-loop` in Copilot Chat.
 

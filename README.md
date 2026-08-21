@@ -75,13 +75,15 @@ Copy-Item "$PluginsRepo\plugins\$PluginName\instructions\*.instructions.md" `
    "$TargetRepo\.github\instructions\"
 ```
 
-For `ralph-loop`, copy its PowerShell scripts to a project scripts directory if you need them:
+For `ralph-loop`, copy its PowerShell scripts to the target repository's root `scripts` directory:
 
 ```powershell
 New-Item -ItemType Directory -Force "$TargetRepo\scripts"
 Copy-Item "$PluginsRepo\plugins\ralph-loop\scripts\*.ps1" `
    "$TargetRepo\scripts\"
 ```
+
+The Ralph prompts expect these scripts at `./scripts/`.
 
 ### 3. Reload VS Code
 

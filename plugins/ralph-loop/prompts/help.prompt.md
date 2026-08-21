@@ -12,7 +12,7 @@ Explain to the user:
    - Work persists in files, and each iteration builds on previous outcomes.
 
 2. Available prompts:
-   - `/ralph-loop TASK [--max-iterations N] [--completion-promise TEXT]`
+   - `/ralph-loop TASK [--max-iterations N] [--completion-promise TEXT]` (N defaults to 5)
    - `/cancel-ralph`
    - `/help` (this prompt)
 
@@ -25,7 +25,8 @@ Explain to the user:
    - Not ideal for tasks requiring frequent human product decisions.
 
 5. Practical tip:
-   - Always set `--max-iterations` to avoid runaway loops.
+   - The loop defaults to 5 iterations so the user does not need to remember the option.
+   - Set `--max-iterations N` when a task needs a different limit.
 
 6. References:
    - https://ghuntley.com/ralph/
