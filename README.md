@@ -45,16 +45,15 @@ copilot-agent-plugins/
 
 ## Installing from GitHub
 
-The commands below work after this repository has been published at
-`https://github.com/Github-Copilot-Plugins/Github-Copilot-Plugins`. Replace the URL if the repository
-is published under a different GitHub owner or name.
+The commands below use this repository's public GitHub URL:
+`https://github.com/dhananjay09892/Github-Copilot-Plugins`.
 
 ### 1. Clone the public repository
 
 Run this outside the project you want to configure:
 
 ```powershell
-git clone https://github.com/Github-Copilot-Plugins/Github-Copilot-Plugins.git
+git clone https://github.com/dhananjay09892/Github-Copilot-Plugins.git
 ```
 
 The same command works in macOS and Linux terminals. Change into the cloned directory before
