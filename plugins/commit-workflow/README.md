@@ -24,6 +24,14 @@ grounded in the actual staged diff — not a guess of what changed.
 This plugin covers commit messages and changelog entries only. PR titles/descriptions are handled by
 `draft-pr-description` in the [`pr-issue-workflow`](../pr-issue-workflow) plugin.
 
+## Prerequisites
+
+- Run this inside a Git repository with a working tree and staged changes.
+- The prompts are built around the real staged diff (`git diff --staged`), so they work best when
+  you stage the files for the change you actually want summarized.
+- If no staged changes exist, the prompts can still draft a general message from your context, but the
+  quality will be lower because the repo diff is empty.
+
 ## Safety model
 
 Neither prompt runs `git commit`, `git push`, or edits `CHANGELOG.md` without showing the exact

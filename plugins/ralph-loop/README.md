@@ -14,6 +14,7 @@ Copilot-native port of the Ralph Wiggum iterative loop technique from the Claude
   - [`ralph-loop-resume.instructions.md`](./instructions/ralph-loop-resume.instructions.md)
 - Scripts:
   - [`setup-ralph-loop.ps1`](./scripts/setup-ralph-loop.ps1)
+  - [`continue-ralph.ps1`](./scripts/continue-ralph.ps1)
   - [`resume-ralph.ps1`](./scripts/resume-ralph.ps1)
   - [`cancel-ralph.ps1`](./scripts/cancel-ralph.ps1)
 
@@ -71,6 +72,8 @@ $base = "https://raw.githubusercontent.com/dhananjay09892/Github-Copilot-Plugins
 
 After the command completes, reload VS Code and run `/ralph-loop` in Copilot Chat. Review existing
 files with the same names before running this command because the downloads replace those files.
+
+`continue-ralph.ps1` is part of the loop lifecycle as well; it checks the current `.copilot/ralph-loop.local.md` state and helps you continue the last task without creating a second loop.
 
 Copy files into target repo:
 

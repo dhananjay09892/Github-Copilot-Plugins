@@ -21,6 +21,12 @@ A security-focused Copilot plugin that helps review code for vulnerabilities, ma
 - Recommends a minimal remediation path for confirmed or high-confidence findings
 - Keeps output conservative and evidence-driven
 
+## Prerequisites
+
+- Run this against a checked-out repository with file access so the inventory and verification agents can inspect the real code and config.
+- This workflow is for reviewing local source code and security-relevant config, not for staging or publishing a release.
+- Use it on a repo or branch you are comfortable reviewing; the plugin is designed to be conservative and evidence-based rather than broad or noisy.
+
 ## Recommended workflow
 
 1. Run the orchestrator agent: `copilot-security`

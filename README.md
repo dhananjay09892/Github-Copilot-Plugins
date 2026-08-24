@@ -25,17 +25,23 @@ itself; installation means copying the selected bundle into the target repositor
 copilot-agent-plugins/
 ├── marketplace.json              # catalog of available plugins
 ├── plugins/
-│   ├── ralph-loop/                # Iterative Ralph loop workflow bundle
 │   ├── agent-browser/             # Citation-disciplined web/GitHub research prompts
-│   ├── pr-issue-workflow/         # GitHub CLI-driven PR description, issue triage, review-to-task prompts
-│   ├── copilot-customization-manager/ # Audit/create this repo's own prompts, instructions, agents
-│   ├── onboarding-docs/           # CONTRIBUTING.md, dev-setup guide, and architecture diagram generation
+│   ├── code-simplifier/           # Simplifies and refines code while preserving behavior
 │   ├── commit-workflow/           # Conventional commit messages and changelog entries from the staged diff
-│   └── dev-workflow/               # one plugin = one themed bundle of prompts/instructions
+│   ├── copilot-customization-manager/ # Audit/create this repo's own prompts, instructions, agents
+│   ├── copilot-security/          # Security review workflow with inventory, verification, patch, and report stages
+│   ├── dev-workflow/              # Full development lifecycle prompt bundle
+│   ├── onboarding-docs/           # CONTRIBUTING.md, dev-setup guide, and architecture diagram generation
+│   ├── pr-issue-workflow/         # GitHub CLI-driven PR description, issue triage, review-to-task prompts
+│   ├── ralph-loop/                # Iterative Ralph loop workflow bundle
+│   └── <plugin>/                  # each plugin folder contains plugin.json + README + one or more assets
 │       ├── plugin.json           # plugin metadata
 │       ├── README.md             # what it does, how to install/use
 │       ├── prompts/              # *.prompt.md — one file per single-focused task
-│       └── instructions/         # *.instructions.md — shared standards all prompts link to
+│       ├── instructions/         # *.instructions.md — shared standards all prompts link to
+│       ├── agents/               # custom agents when a plugin uses agent workflows
+│       ├── scripts/              # PowerShell or shell helpers when a plugin needs runtime setup
+│       └── reports/              # report templates or output contracts when relevant
 └── README.md
 ```
 
@@ -43,13 +49,15 @@ copilot-agent-plugins/
 
 | Plugin | Description |
 |--------|-------------|
-| [`ralph-loop`](./plugins/ralph-loop) | Run iterative self-referential development loops with max-iteration and completion controls |
-| [`dev-workflow`](./plugins/dev-workflow) | Analyze repo, plan feature, implement feature, debug issue, generate tests, review code, security audit, refactor, documentation |
 | [`agent-browser`](./plugins/agent-browser) | Research questions and verify sources using VS Code Copilot's built-in fetch/githubRepo/search tools, with citation and prompt-injection discipline |
-| [`pr-issue-workflow`](./plugins/pr-issue-workflow) | Draft PR descriptions, triage issues, and turn review comments into task checklists using the GitHub CLI |
-| [`copilot-customization-manager`](./plugins/copilot-customization-manager) | Audit and create this repository's own .github/prompts, .github/instructions, and .github/agents files |
-| [`onboarding-docs`](./plugins/onboarding-docs) | Generate CONTRIBUTING.md, a dev-setup guide, and a Mermaid architecture diagram for new contributors |
+| [`code-simplifier`](./plugins/code-simplifier) | Simplify and refine code for clarity, consistency, and maintainability while preserving behavior |
 | [`commit-workflow`](./plugins/commit-workflow) | Generate Conventional Commits-style commit messages and Keep a Changelog-style changelog entries from the staged diff |
+| [`copilot-customization-manager`](./plugins/copilot-customization-manager) | Audit and create this repository's own .github/prompts, .github/instructions, and .github/agents files |
+| [`copilot-security`](./plugins/copilot-security) | Review repositories for security issues with inventory, verification, patch, and report workflow stages |
+| [`dev-workflow`](./plugins/dev-workflow) | Analyze repo, plan feature, implement feature, debug issue, generate tests, review code, security audit, refactor, documentation |
+| [`onboarding-docs`](./plugins/onboarding-docs) | Generate CONTRIBUTING.md, a dev-setup guide, and a Mermaid architecture diagram for new contributors |
+| [`pr-issue-workflow`](./plugins/pr-issue-workflow) | Draft PR descriptions, triage issues, and turn review comments into task checklists using the GitHub CLI |
+| [`ralph-loop`](./plugins/ralph-loop) | Run iterative self-referential development loops with max-iteration and completion controls |
 
 ## Installing from GitHub
 
@@ -103,13 +111,15 @@ to their `applyTo` pattern.
 
 Each plugin README contains its available commands and plugin-specific setup:
 
-- [`dev-workflow`](./plugins/dev-workflow/README.md)
-- [`ralph-loop`](./plugins/ralph-loop/README.md)
 - [`agent-browser`](./plugins/agent-browser/README.md)
-- [`pr-issue-workflow`](./plugins/pr-issue-workflow/README.md)
-- [`copilot-customization-manager`](./plugins/copilot-customization-manager/README.md)
-- [`onboarding-docs`](./plugins/onboarding-docs/README.md)
+- [`code-simplifier`](./plugins/code-simplifier/README.md)
 - [`commit-workflow`](./plugins/commit-workflow/README.md)
+- [`copilot-customization-manager`](./plugins/copilot-customization-manager/README.md)
+- [`copilot-security`](./plugins/copilot-security/README.md)
+- [`dev-workflow`](./plugins/dev-workflow/README.md)
+- [`onboarding-docs`](./plugins/onboarding-docs/README.md)
+- [`pr-issue-workflow`](./plugins/pr-issue-workflow/README.md)
+- [`ralph-loop`](./plugins/ralph-loop/README.md)
 
 ## Before using a plugin
 
