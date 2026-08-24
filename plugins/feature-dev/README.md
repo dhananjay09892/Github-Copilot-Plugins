@@ -42,6 +42,19 @@ Use code-reviewer to review my current diff for correctness and missing tests.
 
 ## Install into a project
 
+**Quick install from PowerShell:**
+
+Run this command from the root of the target repository. It downloads the plugin directly from
+GitHub and creates the required VS Code folders:
+
+```powershell
+$base = "https://raw.githubusercontent.com/dhananjay09892/Github-Copilot-Plugins/main/plugins/feature-dev"; New-Item -ItemType Directory -Force .github/prompts, .github/instructions, .github/agents | Out-Null; Invoke-WebRequest "$base/prompts/feature-dev.prompt.md" -OutFile ".github/prompts/feature-dev.prompt.md"; Invoke-WebRequest "$base/instructions/feature-development-standards.instructions.md" -OutFile ".github/instructions/feature-development-standards.instructions.md"; @("code-architect", "code-explorer", "code-reviewer") | ForEach-Object { Invoke-WebRequest "$base/agents/$_.md" -OutFile ".github/agents/$_.md" }
+```
+
+After the command completes, reload VS Code and use `/feature-dev` in Copilot Chat.
+
+**Copy from a local checkout:**
+
 Copy the prompt and instruction files into `.github/prompts/` and `.github/instructions/`, and the agent files into `.github/agents/`, then reload VS Code:
 
 ```powershell
