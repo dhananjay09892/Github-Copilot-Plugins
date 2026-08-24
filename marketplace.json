@@ -15,6 +15,12 @@
       "category": "development"
     },
     {
+      "name": "feature-dev",
+      "source": "./plugins/feature-dev",
+      "description": "Structured seven-phase feature development workflow with codebase exploration, architecture design, implementation approval, and quality review.",
+      "category": "development"
+    },
+    {
       "name": "code-simplifier",
       "source": "./plugins/code-simplifier",
       "description": "Agent that simplifies and refines code for clarity, consistency, and maintainability while preserving functionality.",

@@ -31,6 +31,7 @@ copilot-agent-plugins/
 │   ├── copilot-customization-manager/ # Audit/create this repo's own prompts, instructions, agents
 │   ├── copilot-security/          # Security review workflow with inventory, verification, patch, and report stages
 │   ├── dev-workflow/              # Full development lifecycle prompt bundle
+│   ├── feature-dev/               # Seven-phase feature development workflow with specialist agents
 │   ├── onboarding-docs/           # CONTRIBUTING.md, dev-setup guide, and architecture diagram generation
 │   ├── pr-issue-workflow/         # GitHub CLI-driven PR description, issue triage, review-to-task prompts
 │   ├── ralph-loop/                # Iterative Ralph loop workflow bundle
@@ -55,6 +56,7 @@ copilot-agent-plugins/
 | [`copilot-customization-manager`](./plugins/copilot-customization-manager) | Audit and create this repository's own .github/prompts, .github/instructions, and .github/agents files |
 | [`copilot-security`](./plugins/copilot-security) | Review repositories for security issues with inventory, verification, patch, and report workflow stages |
 | [`dev-workflow`](./plugins/dev-workflow) | Analyze repo, plan feature, implement feature, debug issue, generate tests, review code, security audit, refactor, documentation |
+| [`feature-dev`](./plugins/feature-dev) | Seven-phase feature development workflow with codebase exploration, architecture design, implementation gates, and quality review |
 | [`onboarding-docs`](./plugins/onboarding-docs) | Generate CONTRIBUTING.md, a dev-setup guide, and a Mermaid architecture diagram for new contributors |
 | [`pr-issue-workflow`](./plugins/pr-issue-workflow) | Draft PR descriptions, triage issues, and turn review comments into task checklists using the GitHub CLI |
 | [`ralph-loop`](./plugins/ralph-loop) | Run iterative self-referential development loops with max-iteration and completion controls |
@@ -117,6 +119,7 @@ Each plugin README contains its available commands and plugin-specific setup:
 - [`copilot-customization-manager`](./plugins/copilot-customization-manager/README.md)
 - [`copilot-security`](./plugins/copilot-security/README.md)
 - [`dev-workflow`](./plugins/dev-workflow/README.md)
+- [`feature-dev`](./plugins/feature-dev/README.md)
 - [`onboarding-docs`](./plugins/onboarding-docs/README.md)
 - [`pr-issue-workflow`](./plugins/pr-issue-workflow/README.md)
 - [`ralph-loop`](./plugins/ralph-loop/README.md)

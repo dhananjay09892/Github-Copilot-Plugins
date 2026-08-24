@@ -1,0 +1,22 @@
+{
+  "name": "feature-dev",
+  "displayName": "Feature Development",
+  "description": "Structured seven-phase feature development workflow with codebase exploration, architecture design, implementation gates, and quality review.",
+  "version": "1.0.0",
+  "author": { "name": "Github-Copilot-Plugins" },
+  "category": "development",
+  "homepage": "./README.md",
+  "contents": {
+    "prompts": [
+      "./prompts/feature-dev.prompt.md"
+    ],
+    "agents": [
+      "./agents/code-explorer.md",
+      "./agents/code-architect.md",
+      "./agents/code-reviewer.md"
+    ],
+    "instructions": [
+      "./instructions/feature-development-standards.instructions.md"
+    ]
+  }
+}
