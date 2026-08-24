@@ -15,6 +15,12 @@
       "category": "development"
     },
     {
+      "name": "code-simplifier",
+      "source": "./plugins/code-simplifier",
+      "description": "Agent that simplifies and refines code for clarity, consistency, and maintainability while preserving functionality.",
+      "category": "development"
+    },
+    {
       "name": "agent-browser",
       "source": "./plugins/agent-browser",
       "description": "Citation-disciplined, prompt-injection-aware research prompts built on VS Code Copilot's built-in fetch/githubRepo/search tools.",

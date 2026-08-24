@@ -1,0 +1,14 @@
+{
+  "name": "code-simplifier",
+  "displayName": "Code Simplifier",
+  "description": "Agent that simplifies and refines code for clarity, consistency, and maintainability while preserving functionality.",
+  "version": "1.0.0",
+  "author": { "name": "Github-Copilot-Plugins" },
+  "category": "development",
+  "homepage": "./README.md",
+  "contents": {
+    "agents": [
+      "./agents/code-simplifier.md"
+    ]
+  }
+}
