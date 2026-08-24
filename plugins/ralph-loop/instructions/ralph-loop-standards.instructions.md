@@ -38,8 +38,11 @@ Per iteration:
 
 - Store loop state in `.copilot/ralph-loop.local.md`.
 - Track at minimum: active flag, iteration, max iterations, completion promise, timestamps, and prompt text.
+- If an active loop already exists, continue it instead of creating a second state file; the state file is the source of truth for the current task.
 
 ## Copilot Runtime Note
 
 - Copilot has no stop-hook mechanism like Claude Code.
-- Prompts should emulate loop behavior by reading/writing loop state and continuing iterations within the session.
+- This plugin is an emulation of the Ralph loop, not full runtime parity with the Claude implementation.
+- Prompts should emulate loop behavior by reading/writing loop state, continuing the same task across iterations, and stopping only when the completion promise is genuinely true or the max iteration count is reached.
+- If `.copilot/ralph-loop.local.md` already exists, continue that active loop instead of creating a second one.

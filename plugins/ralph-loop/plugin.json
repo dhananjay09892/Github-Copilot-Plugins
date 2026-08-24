@@ -10,14 +10,18 @@
     "prompts": [
       "./prompts/ralph-loop.prompt.md",
       "./prompts/cancel-ralph.prompt.md",
-      "./prompts/help.prompt.md"
+      "./prompts/help.prompt.md",
+      "./prompts/resume-ralph.prompt.md"
     ],
     "instructions": [
-      "./instructions/ralph-loop-standards.instructions.md"
+      "./instructions/ralph-loop-standards.instructions.md",
+      "./instructions/ralph-loop-resume.instructions.md"
     ],
     "scripts": [
       "./scripts/setup-ralph-loop.ps1",
-      "./scripts/cancel-ralph.ps1"
+      "./scripts/cancel-ralph.ps1",
+      "./scripts/continue-ralph.ps1",
+      "./scripts/resume-ralph.ps1"
     ]
   }
 }

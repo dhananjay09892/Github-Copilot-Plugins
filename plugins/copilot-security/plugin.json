@@ -1,0 +1,25 @@
+{
+  "name": "copilot-security",
+  "displayName": "Copilot Security",
+  "description": "Security review workflow that inventories the repo, researches likely vulnerabilities, verifies exploitability, and recommends targeted remediation.",
+  "version": "1.0.0",
+  "author": { "name": "Github-Copilot-Plugins" },
+  "category": "security",
+  "homepage": "./README.md",
+  "contents": {
+    "agents": [
+      "./agents/copilot-security.md",
+      "./agents/security-scan-inventory.md",
+      "./agents/security-scan-researcher.md",
+      "./agents/security-scan-verifier.md",
+      "./agents/security-patch-generator.md",
+      "./agents/security-patch-verifier.md"
+    ],
+    "instructions": [
+      "./instructions/security-workflow.instructions.md"
+    ],
+    "reports": [
+      "./reports/security-report-template.md"
+    ]
+  }
+}

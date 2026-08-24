@@ -21,7 +21,7 @@ Start or continue a deterministic iteration loop over one stable prompt.
    - task prompt text (required)
    - `--max-iterations N` (optional, default 5; use a larger value only when needed)
    - `--completion-promise TEXT` (optional)
-2. Initialize loop state by running:
+2. If `.copilot/ralph-loop.local.md` already exists, read it and continue the same task instead of starting a fresh loop. Otherwise initialize the loop state by running:
    - PowerShell: `./scripts/setup-ralph-loop.ps1 $ARGUMENTS`
 3. Read `.copilot/ralph-loop.local.md` and execute iterations in this session.
 4. On each iteration:
@@ -33,6 +33,7 @@ Start or continue a deterministic iteration loop over one stable prompt.
    - completion promise is true and you can honestly output `<promise>TEXT</promise>`, or
    - max iteration count reached.
 6. If max iterations reached without completion, report blockers and next best actions.
+7. Treat this as a prompt-driven emulation of Claude's auto-loop behavior, not as a perfect runtime parity feature: the agent must explicitly continue the same task across cycles until the promise is verifiably true.
 
 ## Critical rule
 

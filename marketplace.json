@@ -21,6 +21,12 @@
       "category": "development"
     },
     {
+      "name": "copilot-security",
+      "source": "./plugins/copilot-security",
+      "description": "Security review agent that scans code for vulnerabilities, prioritizes confirmed issues, and guides remediation without over-reporting noise.",
+      "category": "security"
+    },
+    {
       "name": "agent-browser",
       "source": "./plugins/agent-browser",
       "description": "Citation-disciplined, prompt-injection-aware research prompts built on VS Code Copilot's built-in fetch/githubRepo/search tools.",

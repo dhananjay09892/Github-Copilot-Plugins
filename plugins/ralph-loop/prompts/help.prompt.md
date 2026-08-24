@@ -10,9 +10,11 @@ Explain to the user:
 1. What Ralph loop is:
    - A repeat-evaluate-improve workflow with a stable prompt.
    - Work persists in files, and each iteration builds on previous outcomes.
+   - In Copilot this is a prompt-driven emulation of Claude's Stop-hook behavior, not a perfect runtime parity feature.
 
 2. Available prompts:
    - `/ralph-loop TASK [--max-iterations N] [--completion-promise TEXT]` (N defaults to 5)
+   - `/resume-ralph`
    - `/cancel-ralph`
    - `/help` (this prompt)
 
@@ -27,6 +29,7 @@ Explain to the user:
 5. Practical tip:
    - The loop defaults to 5 iterations so the user does not need to remember the option.
    - Set `--max-iterations N` when a task needs a different limit.
+   - If `.copilot/ralph-loop.local.md` already exists, continue the current loop instead of creating a second one.
 
 6. References:
    - https://ghuntley.com/ralph/
